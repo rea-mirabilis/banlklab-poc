@@ -1,9 +1,9 @@
 name: Build and deploy to GitHub Pages
 
 permissions:
-  id-token: write       # required for OIDC token used by actions/deploy-pages
-  pages: write          # required to publish pages
-  contents: read        # needed for checkout/actions that read repo files
+  id-token: write         # required for OIDC token used by actions/deploy-pages
+  pages: write            # required to publish pages
+  contents: read          # needed for checkout/actions that read repo files
 
 on:
   push:
@@ -31,5 +31,13 @@ jobs:
   deploy:
     needs: build-and-upload
     runs-on: ubuntu-latest
+    
+    # 👇 FIXED: Added the environment block
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
-      - uses: actions/deploy-pages@v4
+      - name: Deploy to GitHub Pages
+        id: deployment # 👈 Added ID to reference the URL above
+        uses: actions/deploy-pages@v4
