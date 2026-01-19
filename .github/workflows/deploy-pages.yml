@@ -1,8 +1,10 @@
 name: Build and deploy to GitHub Pages
 
 permissions:
-  id-token: write
-  contents: read
+  id-token: write       # required for OIDC token used by actions/deploy-pages
+  pages: write          # required to publish pages
+  contents: read        # needed for checkout/actions that read repo files
+
 on:
   push:
     branches: [ main, master ]
