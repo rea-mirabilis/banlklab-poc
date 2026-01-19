@@ -1,5 +1,8 @@
 name: Build and deploy to GitHub Pages
 
+permissions:
+  id-token: write
+  contents: read
 on:
   push:
     branches: [ main, master ]
