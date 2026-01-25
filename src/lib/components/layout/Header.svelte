@@ -1,5 +1,6 @@
 <script lang="ts">
   import { page } from '$app/stores';
+  import { base } from '$app/paths';
 
   // Get data from page store (passed from +layout.server.ts)
   $: headerData = $page.data.header;
@@ -16,7 +17,7 @@
   <div class="container mx-auto px-4 flex justify-between items-center">
     <!-- Logo -->
     <div class="flex items-center">
-      <a href={headerData?.full_title_link || '/'} class="text-xl md:text-2xl font-serif text-white hover:text-gray-300 transition-colors">
+      <a href={base + (headerData?.full_title_link || '/')} class="text-xl md:text-2xl font-serif text-white hover:text-gray-300 transition-colors">
         <span class="font-bold">{headerData?.title || 'The Bank Lab'}</span> <span class="text-lg italic font-normal">{headerData?.subtitle || '@'}{headerData?.university || 'Universität Bern'}</span>
       </a>
     </div>
@@ -25,7 +26,7 @@
     <nav class="hidden md:flex space-x-8">
       {#each navLinks as link (link.href)}
         <a
-          href={link.href}
+          href={base + link.href}
           class="text-xs font-semibold tracking-wider text-gray-300 hover:text-white transition-colors uppercase"
           aria-current={$page.url.pathname === link.href ? 'page' : undefined}
           class:text-white={$page.url.pathname === link.href}
@@ -62,7 +63,7 @@
       <div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
         {#each navLinks as link (link.href)}
           <a
-            href={link.href}
+            href={base + link.href}
             class="block py-2 text-center text-sm font-semibold uppercase tracking-wider text-gray-300 hover:text-white hover:bg-white/10 rounded transition-colors"
             aria-current={$page.url.pathname === link.href ? 'page' : undefined}
             class:text-white={$page.url.pathname === link.href}

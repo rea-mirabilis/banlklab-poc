@@ -1,5 +1,6 @@
 <script lang="ts">
   import { page } from '$app/stores';
+  import { base } from '$app/paths';
 </script>
 
 <svelte:head>
@@ -21,7 +22,7 @@
     {/if}
   </p>
   
-  <a href="/" class="btn btn-primary">
+  <a href={base + "/"} class="btn btn-primary">
     Go Back Home
   </a>
 </div>

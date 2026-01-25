@@ -1,5 +1,6 @@
 <script lang="ts">
   import { page } from '$app/stores';
+  import { base } from '$app/paths';
   
   $: footerData = $page.data.footer;
   const currentYear = new Date().getFullYear();
@@ -16,7 +17,7 @@
           {#each footerData.sections as section}
              <div class="flex flex-col space-y-3">
                {#each section.links as link}
-                 <a href={link.href} class="hover:text-gray-300 transition-colors">{link.text}</a>
+                 <a href={base + link.href} class="hover:text-gray-300 transition-colors">{link.text}</a>
                {/each}
              </div>
           {/each}

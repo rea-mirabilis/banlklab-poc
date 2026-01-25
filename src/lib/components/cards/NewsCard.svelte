@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { base } from '$app/paths';
   export let date: string;
   export let title: string | undefined = undefined;
   export let image: string | undefined = undefined;
@@ -7,7 +8,7 @@
 <div class="bg-white rounded-lg border border-gray-200 overflow-hidden h-full flex flex-col hover:shadow-lg transition-shadow">
   {#if image}
     <div class="h-48 overflow-hidden bg-gray-100">
-      <img src={image} alt={title || 'News'} class="w-full h-full object-cover" />
+      <img src={base + image} alt={title || 'News'} class="w-full h-full object-cover" />
     </div>
   {/if}
   
@@ -20,7 +21,7 @@
       <slot />
     </div>
     <div class="text-right mt-auto">
-      <a href="/news" class="text-sm font-bold text-black hover:underline inline-flex items-center">
+      <a href={base + "/news"} class="text-sm font-bold text-black hover:underline inline-flex items-center">
         Read More 
         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />

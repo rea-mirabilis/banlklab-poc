@@ -2,6 +2,7 @@
   import WelcomeCard from '$lib/components/cards/WelcomeCard.svelte';
   import NewsCard from '$lib/components/cards/NewsCard.svelte';
   import TestimonialCard from '$lib/components/cards/TestimonialCard.svelte';
+  import { base } from '$app/paths';
   
   export let data;
 
@@ -56,15 +57,15 @@
       <p class="text-lg text-gray-600">The Bank Lab @Universität Bern</p>
       
       <div class="flex gap-4 pt-4">
-        <a href="/news" class="btn btn-primary">News</a>
-        <a href="/about" class="btn btn-outline">About Us</a>
+        <a href={base + "/news"} class="btn btn-primary">News</a>
+        <a href={base + "/about"} class="btn btn-outline">About Us</a>
       </div>
     </div>
     
     <!-- Right Image -->
     <div class="md:w-1/2">
       <div class="rounded-3xl overflow-hidden shadow-xl">
-        <img src={heroImage} alt="Forest texture" class="w-full h-80 md:h-96 object-cover" />
+        <img src={base + heroImage} alt="Forest texture" class="w-full h-80 md:h-96 object-cover" />
       </div>
     </div>
   </div>
@@ -78,8 +79,8 @@
       <h2 class="text-3xl font-serif font-bold text-black">Welcome!</h2>
       <p class="text-gray-600 leading-relaxed">
         Welcome to the web page of the Division Theoretical Ecology and Evolution at the <a href="https://www.unibe.ch/index_eng.html" class="underline text-black">University of Bern</a>. 
-        Here you can follow the latest lab news (below) or learn more about our <a href="/people" class="underline text-black">team members</a>, 
-        <a href="/research" class="underline text-black">research</a>, <a href="/publications" class="underline text-black">publications</a> and more!
+        Here you can follow the latest lab news (below) or learn more about our <a href={base + "/people"} class="underline text-black">team members</a>, 
+        <a href={base + "/research"} class="underline text-black">research</a>, <a href={base + "/publications"} class="underline text-black">publications</a> and more!
       </p>
     </div>
 
@@ -131,21 +132,21 @@
         <h2 class="text-3xl font-serif font-bold text-black mb-2">Lab News Feed</h2>
         <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eium</p>
       </div>
-      <a href="/news" class="hidden md:inline-block font-medium text-black hover:underline group">
+      <a href={base + "/news"} class="hidden md:inline-block font-medium text-black hover:underline group">
         View all news <span class="group-hover:translate-x-1 inline-block transition-transform">→</span>
       </a>
     </div>
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
       {#each newsItems as item}
-        <NewsCard date={item.date} title={item.title} image={item.image}>
+        <NewsCard date={item.date} title={item.title} image={base + item.image}>
           {item.content}
         </NewsCard>
       {/each}
     </div>
     
     <div class="mt-8 text-center md:hidden">
-      <a href="/news" class="font-medium text-black hover:underline">View all news →</a>
+      <a href={base + "/news"} class="font-medium text-black hover:underline">View all news →</a>
     </div>
   </div>
 </section>
@@ -156,7 +157,7 @@
     <div class="text-center mb-16">
       <h2 class="text-3xl font-serif font-bold text-black mb-4">What do our lab members say?</h2>
       <p class="text-gray-600 max-w-3xl mx-auto">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation <a href="/testimonials" class="underline text-black">testimonials</a>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation <a href={base + "/testimonials"} class="underline text-black">testimonials</a>
       </p>
     </div>
 

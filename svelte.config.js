@@ -14,7 +14,14 @@ const config = {
     },
     prerender: {
       entries: ['*'],
-      handleMissingId: 'ignore'
+      handleMissingId: 'ignore',
+      handleHttpError: ({ status, path, referrer, message }) => {
+        if (status === 404) {
+          // This is a known issue with the base path
+          return;
+        }
+        throw new Error(message);
+      }
     }
   }
 };
