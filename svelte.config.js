@@ -7,21 +7,14 @@ const config = {
     adapter: adapter({
       pages: 'docs',
       assets: 'docs',
-      fallback: 'index.html'
+      fallback: null
     }),
     paths: {
       base: '/banlklab-poc'
     },
     prerender: {
       entries: ['*'],
-      handleMissingId: 'ignore',
-      handleHttpError: ({ status, path, referrer, message }) => {
-        if (status === 404) {
-          // This is a known issue with the base path
-          return;
-        }
-        throw new Error(message);
-      }
+      handleMissingId: 'ignore'
     }
   }
 };
