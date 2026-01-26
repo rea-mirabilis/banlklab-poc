@@ -1,6 +1,6 @@
 ---
 copyright: "2026 Banklab."
-extra_text: "Lorem ipsum"
+extra_text: "..."
 sections:
   - links:
     - text: "News"
@@ -19,6 +19,6 @@ sections:
   - links:
     - text: "Publications"
       href: "/publications"
-    - text: "Ipsum"
-      href: "#"
+    - text: "Contact"
+      href: "/contact"
 ---

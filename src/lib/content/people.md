@@ -63,7 +63,7 @@ associated:
     links: "[Google Scholar](https://scholar.google.com/citations?user=V5rDLCkAAAAJ&hl=en)"
   - name: Dhanya Bharath
     role: "Associated PhD student (from [Catalina Chaparro Pedraza](https://scholar.google.com/citations?user=e27luTMAAAAJ&hl=en&oi=ao)'s Group at EAWAG)"
-    contact: "dhanya.bharath [at] students.unibe.ch"
+    contact: "dhanya.bharath@students.unibe.ch"
     image: /assets/img/team/default_person.jpg
     links: "[Google Scholar](https://scholar.google.com/citations?user=IKh6U6MAAAAJ&hl=en&oi=ao)"
 

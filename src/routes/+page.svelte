@@ -80,7 +80,7 @@
       <p class="text-gray-600 leading-relaxed">
         Welcome to the web page of the Division Theoretical Ecology and Evolution at the <a href="https://www.unibe.ch/index_eng.html" class="underline text-black">University of Bern</a>. 
         Here you can follow the latest lab news (below) or learn more about our <a href={base + "/people"} class="underline text-black">team members</a>, 
-        <a href={base + "/research"} class="underline text-black">research</a>, <a href={base + "/publications"} class="underline text-black">publications</a> and more!
+        <a href={"/research"} class="underline text-black">research</a>, <a href={base + "/publications"} class="underline text-black">publications</a> and more!
       </p>
     </div>
 
@@ -132,7 +132,7 @@
         <h2 class="text-3xl font-serif font-bold text-black mb-2">Lab News Feed</h2>
         <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eium</p>
       </div>
-      <a href={base + "/news"} class="hidden md:inline-block font-medium text-black hover:underline group">
+      <a href={"/news"} class="hidden md:inline-block font-medium text-black hover:underline group">
         View all news <span class="group-hover:translate-x-1 inline-block transition-transform">→</span>
       </a>
     </div>
@@ -146,7 +146,7 @@
     </div>
     
     <div class="mt-8 text-center md:hidden">
-      <a href={base + "/news"} class="font-medium text-black hover:underline">View all news →</a>
+      <a href={"/news"} class="font-medium text-black hover:underline">View all news →</a>
     </div>
   </div>
 </section>
