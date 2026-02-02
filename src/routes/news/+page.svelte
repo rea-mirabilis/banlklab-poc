@@ -64,11 +64,8 @@
       <h2 class="font-header text-3xl text-(--color-primary-dark) mb-8 border-b border-gray-200 pb-2">Upcoming events</h2>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {#each upcoming as item}
-          <NewsCard date={formatDate(item.date)} title={item.title} image={item.image}>
+         <NewsCard date={formatDate(item.date)} title={item.title} image={item.image} onClick={(e) => openModal(e, item)}>
             {@html parseMd(item.content)}
-            <button class="block mt-4 text-sm font-bold text-[var(--color-primary-dark)] hover:underline cursor-pointer" onclick={(e) => openModal(e, item)}>
-              Read more &rarr;
-            </button>
           </NewsCard>
         {/each}
       </div>
