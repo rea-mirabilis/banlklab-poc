@@ -10,15 +10,17 @@ sections:
     - text: "Research"
       href: "/research"
   - links:
-    - text: "Resources"
-      href: "/resources"
-    - text: "Positions"
-      href: "/positions"
-    - text: "Testimonials"
-      href: "/testimonials"
+    - text: "Teaching"
+      href: "/teaching"
+    - text: "Tools"
+      href: "/tools"
+    - text: "Media"
+      href: "/media"
   - links:
     - text: "Publications"
       href: "/publications"
     - text: "Contact"
       href: "/contact"
+    - text: "Funding"
+      href: "/funding"
 ---

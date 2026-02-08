@@ -22,7 +22,7 @@
 
 
   let { data } = $props();
-  let meta = $derived(data.post.metadata);
+  let meta = $derived(data.post);
 
   // Helper to parse markdown inline safely
   function parseMd(text: string | undefined) {
@@ -30,10 +30,10 @@
     return marked.parseInline(text);
   }
 
-  // Helper to format date for display (e.g. "Dec 08, 2025")
+  // Helper to format date for display (e.g. "08.12.2025")
   function formatDate(dateString: string) {
     const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', { month: 'short', day: '2-digit', year: 'numeric' });
+    return date.toLocaleDateString('de-CH', { day: '2-digit', month: '2-digit', year: 'numeric' });
   }
 
   // Sort items by date (newest first)
