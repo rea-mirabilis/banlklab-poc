@@ -180,7 +180,7 @@ items:
 
   - date: 2024-05-21
     title: "PhD Defense: Marco Louro"
-    image: /assets/img/news/default-defense.jpg
+    image: /assets/img/news/default-defense.JPG
     content: "Congratulations to Marco Louro on successfully defending his PhD titled 'Population dynamics of centrosome amplification'! Marco was co-supervised by Monica Bettencourt-Dias (Gulbenkian Science Institute) and Claudia."
 
   - date: 2024-05-13
